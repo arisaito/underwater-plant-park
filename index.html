@@ -66,7 +66,8 @@
       <!-- 002 -->
       <a-entity cursor-listener position="0.9 0 -4">
         <a-entity
-          animation="property: position; from: 0 -1 0; to: 0 1 0; dir: alternate; loop: true; easing: easeInOutCubic; dur: 3000;"
+          animation="property: position; from: 0 -0.5 0; to: 0 1 0; dir: alternate; loop: true; easing: easeOutCubic; dur: 2000"
+          animation__2="property: rotation; to: 360 0 0; loop: true; easing: easeOutCubic; dur: 2000"
         >
           <a-gltf-model
             scale="3 3 3"
@@ -144,7 +145,7 @@
 
       <!-- 007 -->
 
-      <a-entity cursor-listener position="-5 1 -5">
+      <a-entity cursor-listener position="-2.7 1 -1.9">
         <a-entity
           animation="property: position; from: 0 -1.5 0; to: 0 -1 0; dir: alternate; loop: true; easing: easeOutCubic; dur: 600;"
         >
@@ -157,7 +158,7 @@
         </a-entity>
       </a-entity>
 
-      <!-- 006 -->
+      <!-- 008 -->
 
       <a-entity cursor-listener position="-2 0 0">
         <a-entity
@@ -173,8 +174,7 @@
         </a-entity>
       </a-entity>
 
-
-      <!-- 真後ろ側転 -->
+      <!-- 009 真後ろ側転 -->
 
       <a-entity cursor-listener position="-0.5 0 1.6">
         <a-entity
@@ -190,12 +190,12 @@
         </a-entity>
       </a-entity>
 
-<!-- 近くて赤いこ -->
+      <!-- 010 近くて赤いこ -->
       <a-entity cursor-listener position="1.1 0 1">
         <a-entity
-        animation="property: position; from: 0 -1.5 0; to: 0 -1 0; dir: alternate; loop: true; easing: easeOutCubic; dur: 600;"
-        animation="property: rotation; to: 0 0 360; loop: true; easing: easeOutCubic; dur: 600;"
-      >
+          animation="property: position; from: 0 -1.5 0; to: 0 -1 0; dir: alternate; loop: true; easing: easeOutCubic; dur: 600;"
+          animation="property: rotation; to: 0 0 360; loop: true; easing: easeOutCubic; dur: 600;"
+        >
           <a-gltf-model
             scale="3 3 3"
             src="#kurage02"
@@ -205,7 +205,7 @@
         </a-entity>
       </a-entity>
 
-      <!--  -->
+      <!-- 011 -->
 
       <a-entity cursor-listener position="-2.3 0 1.75">
         <a-entity
@@ -220,7 +220,7 @@
         </a-entity>
       </a-entity>
 
-      <!-- 真上のこ -->
+      <!-- 012 真上のこ -->
 
       <a-entity cursor-listener position="0 1 0">
         <a-entity
@@ -228,13 +228,32 @@
           animation__2="property: position; from: 0 0 0; to: 0 0.5 0; loop: true; dir: alternate; easing: easeInOutCubic; dur: 3000;"
         >
           <a-gltf-model
-            scale="3 3 3"
+            scale="5 5 5"
             src="#kurage01"
             class="kurage"
             rotation="60 27.7 118"
           ></a-gltf-model>
         </a-entity>
       </a-entity>
+
+<!-- 013 さらに走るやつ -->
+
+<a-entity cursor-listener position="0 0 0">
+  <a-entity
+    animation="property: position; from: 0 -1 0; to: 0 1 0; dir: alternate; loop: true; easing: easeInOutCubic; dur: 20000;"
+    animation__2="property: rotation; to: 0 360 0; loop: true; easing: easeInOutCubic; dur: 20000;"
+  >
+    <a-gltf-model
+      position="0 0 3"
+      rotation="0 102 0"
+      scale="3 3 3"
+      src="#kurage02"
+      class="kurage"
+      rotation="180 183 180"
+      gltf-model=""
+    ></a-gltf-model>
+  </a-entity>
+</a-entity>
 
       <!-- ここまで -->
     </a-scene>
