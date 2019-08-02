@@ -3,6 +3,22 @@ body {
     overflow: hidden;
 }
 
+a-scene {
+    display: block;
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #464242;
+}
+
 .star {
     animation: kirakira 10s linear;
     color: rgba(255, 249, 255, 0.2);
@@ -16,20 +32,15 @@ body {
 
 @keyframes kirakira {
     0% {
-        transform:translateY(0) ;
+        transform: translateY(0);
     }
+
     100% {
-        transform:translateY(calc(100vh + 1em));
+        transform: translateY(calc(100vh + 1em));
     }
 }
 
-#background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-
+/* 
 #loading {
     display: block;
     position: absolute;
@@ -55,8 +66,79 @@ body {
 }
 #loading_ui {
 
-}
+} */
 
 #arjsDebugUIContainer {
     display: none;
+}
+
+/* modal */
+
+.modal {
+    visibility: hidden;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+a {
+    color: #464242;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 40px;
+    font-weight: bold;
+    border-radius: 25px;
+    background: lightskyblue;
+}
+
+#container #modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 500px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 30px;
+}
+
+.modalContents {
+    text-align: center;
+}
+
+#statement {
+    padding: 0px 0px 30px 0px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+#attention {
+    text-align: left;
+    font-size: 12px;
 }
