@@ -1,4 +1,3 @@
-//星を作る関数。n は星の個数。多いほど星が多く振ります。
 function starMaker(n) {
   var star = document.createElement("div");
   star.className = "star";
@@ -8,7 +7,6 @@ function starMaker(n) {
   }
 }
 
-//星のセッティングをする関数。
 function starSet(clone) {
   var starClone = clone.cloneNode(true);
   var starStyle = starClone.style;
@@ -19,7 +17,6 @@ function starSet(clone) {
   starStyle.fontSize = ~~(30 * Math.random() + 10) + "px";
   document.body.appendChild(starClone);
 
-  //星一つのアニメーションが終わったら新しい星を生成
   starClone.addEventListener(
     "animationend",
     function() {
@@ -33,5 +30,4 @@ function starSet(clone) {
   );
 }
 
-//使用例。星を50個ふらせます。
 starMaker(30);
