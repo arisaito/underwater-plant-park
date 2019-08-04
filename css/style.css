@@ -20,53 +20,26 @@ a-scene {
 }
 
 .star {
-    animation: kirakira 10s linear;
+    animation: bubble 10s linear;
     color: rgba(255, 249, 255, 0.2);
     display: inline-block;
     height: 1em;
     line-height: 1em;
     position: fixed;
-    top: -1em;
+    bottom: -1em;
     z-index: 10;
 }
 
-@keyframes kirakira {
+@keyframes bubble {
     0% {
         transform: translateY(0);
     }
 
     100% {
-        transform: translateY(calc(100vh + 1em));
+        transform: translateY(-800px);
     }
 }
 
-/* 
-#loading {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
-    pointer-events: none;
-}
-
-#loading_bg {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    text-align: center;
-    font-size: 3vh;
-    background-color: white;
-    padding: 5vh;
-    pointer-events: auto;
-}
-#loading_ui {
-
-} */
 
 #arjsDebugUIContainer {
     display: none;
